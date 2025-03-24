@@ -5,13 +5,13 @@ This API automatically answers questions from graded assignments for the **IIT M
 
 ## **Setup**  
 
-### **1️⃣ Clone the Repository**  
+### **1 Clone the Repository**  
 ```bash
 git clone https://github.com/VivekRatnakar/TDS_Project_2.git
 cd TDS_Project_2
 ```
 
-### **2️⃣ Create & Activate Virtual Environment**  
+### **2 Create & Activate Virtual Environment**  
 #### **Windows:**  
 ```bash
 python -m venv venv
@@ -23,18 +23,18 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### **3️⃣ Install Dependencies**  
+### **3 Install Dependencies**  
 ```bash
 pip install -r requirements.txt
 ```
 
-### **4️⃣ Setup Environment Variables**  
+### **4  Setup Environment Variables**  
 Create a `.env` file and add the following:  
 ```
 AIPROXY_TOKEN=your-api-key
 ```
 
-### **5️⃣ Run the Server**  
+### **5  Run the Server**  
 ```bash
 uvicorn app.main:app --reload
 ```
@@ -44,7 +44,7 @@ The API will be available at **http://localhost:8000**.
 
 ## **Usage**  
 
-### **📌 API Endpoint**  
+### ** API Endpoint**  
 **`POST /api/`**  
 **Parameters:**  
 | Name      | Type      | Required | Description |
