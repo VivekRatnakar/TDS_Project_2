@@ -1,9 +1,35 @@
+# Python virtual environment
 venv/
+env/
+
+# Python bytecode files
 __pycache__/
 *.py[cod]
 *.class
+
+# Environment variables
 .env
+*.env
+
+# Testing and coverage
 .pytest_cache/
 .coverage
 htmlcov/
+
+# MacOS system files
 .DS_Store
+
+# Vercel deployment
+.vercel
+
+# Logs and temp files
+*.log
+*.out
+*.tmp
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Docker-related files (अगर Docker यूज़ कर रहे हैं)
+*.dockerignore
+Dockerfile

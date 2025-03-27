@@ -1,9 +1,11 @@
-from http.server import SimpleHTTPRequestHandler
+from fastapi import FastAPI
+from mangum import Mangum  # Vercel के लिए ASGI एडॉप्टर
 
-class Handler(SimpleHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.end_headers()
-        self.wfile.write(b"Hello, Vercel!")
+app = FastAPI()
 
-handler = Handler
+@app.get("/")
+def home():
+    return {"message": "Hello, Vercel!"}
+
+# Vercel को FastAPI ऐप हैंडल करने के लिए एक ASGI हैंडलर चाहिए
+handler = Mangum(app)
