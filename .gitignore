@@ -1,7 +1,9 @@
 venv/
-venv/
-venv/
-venv/
+__pycache__/
+*.py[cod]
+*.class
 .env
-
-.vercel
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
