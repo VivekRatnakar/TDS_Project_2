@@ -1,14 +1,14 @@
 {
     "version": 2,
     "functions": {
-        "api/vercel_handler.py": {
-            "runtime": "python"
+        "api/main.py": {
+            "runtime": "python3.9"
         }
     },
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "api/vercel_handler.py"
+            "dest": "api/main.py"
         }
     ]
 }
