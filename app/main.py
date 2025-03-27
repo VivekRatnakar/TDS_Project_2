@@ -10,6 +10,24 @@ from app.utils.functions import *
 
 app = FastAPI(title="IITM Assignment API")
 
+class QueryRequest(BaseModel):
+    question: str
+@app.post("/ask/")
+async def handle_question(request: QueryRequest):
+    answers = {
+        "What is AI?": "AI (Artificial Intelligence) refers to the simulation of human intelligence in machines.",
+        "What is Machine Learning?": "Machine Learning is a subset of AI that enables machines to learn from data."
+    }
+    
+    answer = answers.get(request.question, "I don't know the answer to that question.")
+    
+    return {
+        "message": "Question received",
+        "question": request.question,
+        "answer": answer
+    }
+
+
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
