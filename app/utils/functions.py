@@ -21,8 +21,6 @@ import whisper
 from typing import Optional, Dict, Any, List
 from datetime import datetime, timedelta
 
-file_path = r"C:\Users\USER-PC\Documents\TDS_Project_2\data.json" 
-
 
 async def calculate_statistics(file_path: str, operation: str, column_name: str) -> str:
     """
@@ -2233,7 +2231,7 @@ async def parse_function_call(query: str) -> str:
         response = {"name": function_name, "arguments": json.dumps(arguments)}
 
         # Create FastAPI implementation code
-        fastapi_code = """
+        fastapi_code = r"""
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import re
